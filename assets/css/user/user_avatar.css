@@ -7,7 +7,3 @@ body {
   padding: 15px;
   background-color: #f2f3f5;
 }
-/* 表单宽度是500 */
-.layui-form-item {
-  width: 500px;
-}
