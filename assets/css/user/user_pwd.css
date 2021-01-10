@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 15;
+  background-color: #f2f3f5;
+}
+/* 表单宽度是500 */
+.layui-form-item {
+  width: 500px;
+}

@@ -26,7 +26,6 @@ $(function () {
         
         $.post("/api/reguser", data, function (res) {
             if (res.status !== 0) {
-                
               return  layui.layer.msg(res.message); 
             }
            

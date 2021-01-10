@@ -46,3 +46,7 @@ body {
 .layui-form-item .layui-input {
   padding-left: 30px;
 }
+a {
+  transition: none !important;
+}
+
