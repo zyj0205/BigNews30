@@ -48,7 +48,6 @@ $(function () {
                 if (res.status !== 0) {
                     return  layui.layer.msg(res.message); 
                 }
-                
                 layui.layer.msg('登录成功！')
                 localStorage.setItem('token',res.token)
                 location.href='../home/index.html'
