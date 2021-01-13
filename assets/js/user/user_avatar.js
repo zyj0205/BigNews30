@@ -26,19 +26,8 @@ $('#imgFile').on('change', function () {
         .cropper('destroy')
         .attr('src', fileUrl)
         .cropper(options)
-    // var filelist = e.target.files
-    // if (filelist.length === 0) {
-    //   return layer.msg('请选择照片！')
-    // }
-    // var file = e.target.files[0]
-
-    // var imgURL = URL.createObjectURL(file)
-
-    // $image
-    //   .cropper('destroy') 
-    //   .attr('src', imgURL)
-    //   .cropper(options) 
 })
+
 $('#okBtn').on('click',function () {
     var dataURL = $image
     .cropper('getCroppedCanvas', {
@@ -57,7 +46,6 @@ $('#okBtn').on('click',function () {
             }
             layui.layer.msg('上传图片成功！')
             window.parent.getUserInfo()
-            // $('#image').attr('src',user.user_pic)
         }
     })
 })

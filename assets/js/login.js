@@ -21,7 +21,8 @@ $(function () {
         e.preventDefault();
         // $(this).serialize();
         var data = {
-            username: $('#reg_form [name=username]').val(), password: $('#reg_form [name=password]').val()
+            username: $('#reg_form [name=username]').val(),
+            password: $('#reg_form [name=password]').val()
         }
         
         $.post("/api/reguser", data, function (res) {
@@ -49,6 +50,8 @@ $(function () {
                     return  layui.layer.msg(res.message); 
                 }
                 layui.layer.msg('登录成功！')
+                
+
                 localStorage.setItem('token',res.token)
                 location.href='../home/index.html'
              }

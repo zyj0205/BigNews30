@@ -1,4 +1,4 @@
-$(function() {
+// 验证表单
     layui.form.verify({
         nickname:function (value) {
             if (value.length > 6) {
@@ -6,7 +6,7 @@ $(function() {
             }
         }
     })
-    initUserInfo()
+    initUserInfo()//这是发起ajax的请求获取用户信息
     function initUserInfo() {
         $.ajax({
             method: 'get',
@@ -25,7 +25,7 @@ $('#btnReset').on('click',function (e) {
     e.preventDefault();
     initUserInfo();
 })
-    $('.layui-form').submit(function (e) {
+$('.layui-form').submit(function (e) {
         
         e.preventDefault();
         var data = $(this).serialize();
@@ -38,9 +38,7 @@ $('#btnReset').on('click',function (e) {
                     return layui.layer.msg('更新用户数据失败！')
                 }
                 layui.layer.msg('更新用户数据成功！')
-
                 window.parent.getUserInfo();
             }
         })
-    })
 })

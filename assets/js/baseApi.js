@@ -3,6 +3,7 @@ $.ajaxPrefilter(function (options) {
     options.url='http://api-breakingnews-web.itheima.net'+options.url
     if (options.url.indexOf('/my/') !== -1) {
         // if(options.url.includes('/my/'))
+        // 设置token的请求头
         options.headers = {
           Authorization: localStorage.getItem('token') || ''
         }
