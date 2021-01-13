@@ -7,7 +7,22 @@ const options = {
   // 指定预览区域
   preview: '.img-preview'
 }
-
+initUserInfo()
+function initUserInfo() {
+    $.ajax({
+        method: 'get',
+        url: '/my/userinfo',
+        success: function (res) {
+            if (res.status !== 0) {
+              return  layui.layer.msg('获取用户信息失败！')
+            }
+            $image
+            .cropper('destroy')
+            .attr('src', res.data.user_pic)
+            .cropper(options)
+        }
+    })
+}
 // 1.3 创建裁剪区域
 $image.cropper(options)
 $('#passBtn').on('click',function () {
